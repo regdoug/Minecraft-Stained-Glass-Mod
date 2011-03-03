@@ -1,6 +1,8 @@
 package net.minecraft.src;
 
-public class ColoredSands {
+public class BlockColoredSands extends Block {
+
+    public BlockColoredSands(int )
 
     public static Block black;
     public static Block red;
@@ -18,6 +20,10 @@ public class ColoredSands {
     public static Block magenta;
     public static Block orange;
     public static Block white;
+
+    static {
+        black = new
+    }
     
 
 }
