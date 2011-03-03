@@ -12,10 +12,28 @@ public class BlockColoredSands extends BlockSand {
     public int getBlockTextureFromSideAndMetadata(int i, int j){
         Integer a = spriteIDs.get(new Integer(j));
         if(a == null){
-            return blockIndexInTexture;
+            return Block.sand.blockIndexInTexture;
         }else{
             return a.intValue();
         }
+    }
+    
+    //the following three methods were copied from BlockCloth.java
+
+    @Override
+    protected int damageDropped(int i)
+    {
+        return i;
+    }
+
+    public static int func_21034_c(int i)
+    {
+        return ~i & 0xf;
+    }
+
+    public static int func_21035_d(int i)
+    {
+        return ~i & 0xf;
     }
     
     /*
