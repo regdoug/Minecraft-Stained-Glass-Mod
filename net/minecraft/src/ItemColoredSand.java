@@ -13,7 +13,7 @@ public class ItemColoredSand extends ItemBlock
     @Override
     public int getIconIndex(ItemStack itemstack)
     {
-        return StainedGlassConstants.redSand.getBlockTextureFromSideAndMetadata(2, BlockColoredSands.func_21034_c(itemstack.getItemDamage()));
+        return StainedGlassConstants.sandExample.getBlockTextureFromSideAndMetadata(2, BlockColoredSand.func_21034_c(itemstack.getItemDamage()));
     }
 
     public int func_21012_a(int i)

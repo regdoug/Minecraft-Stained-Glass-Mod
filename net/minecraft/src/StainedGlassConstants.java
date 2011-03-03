@@ -11,4 +11,9 @@ package net.minecraft.src;
  */
 public class StainedGlassConstants {
 
+    public static final BlockColoredSand sandExample = new BlockColoredSand(671,0xf);
+
+    public static final int sandID = 671;
+    public static final int sandstoneID = 672;
+
 }
