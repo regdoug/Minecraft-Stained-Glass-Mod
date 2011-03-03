@@ -1,9 +1,9 @@
 package net.minecraft.src;
 
-public class ItemColoredSand extends ItemBlock
+public class ItemColoredGlass extends ItemBlock
 {
 
-    public ItemColoredSand(int i)
+    public ItemColoredGlass(int i)
     {
         super(i);
         setMaxDamage(0);
@@ -13,7 +13,7 @@ public class ItemColoredSand extends ItemBlock
     @Override
     public int getIconIndex(ItemStack itemstack)
     {
-        return StainedGlassConstants.sandExample.getBlockTextureFromSideAndMetadata(2, BlockColoredSand.func_21034_c(itemstack.getItemDamage()));
+        return StainedGlassConstants.glassExample.getBlockTextureFromSideAndMetadata(2, BlockColoredSand.func_21034_c(itemstack.getItemDamage()));
     }
 
     @Override

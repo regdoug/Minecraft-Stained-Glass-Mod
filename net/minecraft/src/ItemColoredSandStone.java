@@ -1,9 +1,14 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package net.minecraft.src;
 
-public class ItemColoredSand extends ItemBlock
+public class ItemColoredSandStone extends ItemBlock
 {
 
-    public ItemColoredSand(int i)
+    public ItemColoredSandStone(int i)
     {
         super(i);
         setMaxDamage(0);
@@ -13,7 +18,7 @@ public class ItemColoredSand extends ItemBlock
     @Override
     public int getIconIndex(ItemStack itemstack)
     {
-        return StainedGlassConstants.sandExample.getBlockTextureFromSideAndMetadata(2, BlockColoredSand.func_21034_c(itemstack.getItemDamage()));
+        return StainedGlassConstants.sandstoneExample.getBlockTextureFromSideAndMetadata(2, BlockColoredSand.func_21034_c(itemstack.getItemDamage()));
     }
 
     @Override
