@@ -56,7 +56,9 @@ public class BlockColoredSand extends BlockSand {
                 }
             } else
             {
-                EntityFallingSand entityfallingsand = new EntityFallingSand(world, (float)i + 0.5F, (float)j + 0.5F, (float)k + 0.5F, StainedGlassConstants.sandID);
+                EntityFallingColoredSand entityfallingsand = new EntityFallingColoredSand(
+                        world, (float)i + 0.5F, (float)j + 0.5F, (float)k + 0.5F,
+                        StainedGlassConstants.sandID, blockIndexInTexture);
                 world.entityJoinedWorld(entityfallingsand);
             }
         }
