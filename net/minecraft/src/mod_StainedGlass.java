@@ -27,6 +27,13 @@ public class mod_StainedGlass extends BaseMod {
   
     public void AddRecipe(CraftingManager cm){
         /*
+         * New type of Furnace
+         */
+        cm.addRecipe(new ItemStack(new ItemBlock(StainedGlassConstants.furnaceID-256)),
+                new Object[]{"###","# #","#L#",
+                        Character.valueOf('#'), new ItemStack(Block.stone),
+                        Character.valueOf('L'), new ItemStack(Block.planks)});
+        /*
          * Colored Sand Section
          *
          * adapted from CraftingManager.java
