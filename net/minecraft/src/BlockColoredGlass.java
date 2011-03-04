@@ -52,7 +52,7 @@ public class BlockColoredGlass extends BlockGlass {
      *
      *   light gray (or silver) is the "color" of regular sand
      *
-     * cyan     - 0x9
+     * teal     - 0x9
      * purple   - 0xa
      * blue     - 0xb
      * brown    - 0xc
@@ -65,20 +65,20 @@ public class BlockColoredGlass extends BlockGlass {
 
     static {
         spriteIDs = new java.util.HashMap<Integer, Integer>();
-        spriteIDs.put(new Integer(0x0),ModLoader.addOverride("/terrain.png","/path/to/glass_white.png"));
-        spriteIDs.put(new Integer(0x1),ModLoader.addOverride("/terrain.png","/path/to/glass_orange.png"));
-        spriteIDs.put(new Integer(0x2),ModLoader.addOverride("/terrain.png","/path/to/glass_magenta.png"));
-        spriteIDs.put(new Integer(0x3),ModLoader.addOverride("/terrain.png","/path/to/glass_ltBlue.png"));
-        spriteIDs.put(new Integer(0x4),ModLoader.addOverride("/terrain.png","/path/to/glass_yellow.png"));
-        spriteIDs.put(new Integer(0x5),ModLoader.addOverride("/terrain.png","/path/to/glass_lime.png"));
-        spriteIDs.put(new Integer(0x6),ModLoader.addOverride("/terrain.png","/path/to/glass_pink.png"));
-        spriteIDs.put(new Integer(0x7),ModLoader.addOverride("/terrain.png","/path/to/glass_gray.png"));
-        spriteIDs.put(new Integer(0x9),ModLoader.addOverride("/terrain.png","/path/to/glass_cyan.png"));
-        spriteIDs.put(new Integer(0xa),ModLoader.addOverride("/terrain.png","/path/to/glass_purple.png"));
-        spriteIDs.put(new Integer(0xb),ModLoader.addOverride("/terrain.png","/path/to/glass_blue.png"));
-        spriteIDs.put(new Integer(0xc),ModLoader.addOverride("/terrain.png","/path/to/glass_brown.png"));
-        spriteIDs.put(new Integer(0xd),ModLoader.addOverride("/terrain.png","/path/to/glass_green.png"));
-        spriteIDs.put(new Integer(0xe),ModLoader.addOverride("/terrain.png","/path/to/glass_red.png"));
-        spriteIDs.put(new Integer(0xf),ModLoader.addOverride("/terrain.png","/path/to/glass_black.png"));
+        spriteIDs.put(new Integer(0x0),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_white.png"));
+        spriteIDs.put(new Integer(0x1),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_orange.png"));
+        spriteIDs.put(new Integer(0x2),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_magenta.png"));
+        spriteIDs.put(new Integer(0x3),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_ltBlue.png"));
+        spriteIDs.put(new Integer(0x4),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_yellow.png"));
+        spriteIDs.put(new Integer(0x5),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_lime.png"));
+        spriteIDs.put(new Integer(0x6),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_pink.png"));
+        spriteIDs.put(new Integer(0x7),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_gray.png"));
+        spriteIDs.put(new Integer(0x9),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_teal.png"));
+        spriteIDs.put(new Integer(0xa),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_purple.png"));
+        spriteIDs.put(new Integer(0xb),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_blue.png"));
+        spriteIDs.put(new Integer(0xc),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_brown.png"));
+        spriteIDs.put(new Integer(0xd),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_green.png"));
+        spriteIDs.put(new Integer(0xe),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_red.png"));
+        spriteIDs.put(new Integer(0xf),ModLoader.addOverride("/terrain.png",StainedGlassConstants.imgPath+"glass_black.png"));
     }
 }

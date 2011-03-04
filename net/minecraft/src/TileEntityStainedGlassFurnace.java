@@ -176,7 +176,7 @@ public class TileEntityStainedGlassFurnace extends TileEntity
             if(flag != (furnaceBurnTime > 0))
             {
                 flag1 = true;
-                BlockFurnace.updateFurnaceBlockState(furnaceBurnTime > 0, worldObj, xCoord, yCoord, zCoord);
+                BlockStainedGlassFurnace.updateFurnaceBlockState(furnaceBurnTime > 0, worldObj, xCoord, yCoord, zCoord);
             }
         }
         if(flag1)

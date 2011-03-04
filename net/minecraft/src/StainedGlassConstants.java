@@ -11,11 +11,13 @@ package net.minecraft.src;
  */
 public class StainedGlassConstants {
 
-    public static final int sandID = 671;
-    public static final int sandstoneID = 672;
-    public static final int glassID = 673;
+    public static final int sandID = 110;
+    public static final int sandstoneID = 111;
+    public static final int glassID = 112;
 
-    public static final int furnaceID = 677;
+    public static final int furnaceID = 115;
+	
+	public static final String imgPath = "/stainedglass/";
 
     public static final BlockColoredSand sandExample = new BlockColoredSand(sandID,0xf);
     public static final BlockColoredSandStone sandstoneExample = new BlockColoredSandStone(sandstoneID,0xf);
