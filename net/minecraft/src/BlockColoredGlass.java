@@ -22,7 +22,7 @@ public class BlockColoredGlass extends BlockGlass {
     public int getBlockTextureFromSideAndMetadata(int i, int j){
         Integer a = spriteIDs.get(new Integer(j));
         if(a == null){
-            return Block.sand.blockIndexInTexture;
+            return Block.glass.blockIndexInTexture;
         }else{
             return a.intValue();
         }
