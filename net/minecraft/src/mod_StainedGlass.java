@@ -18,6 +18,9 @@ public class mod_StainedGlass extends BaseMod {
                 ItemColoredGlass.class);
 
         //Smelting will need a new furnace block b/c it won't work any other way
+
+        //Regular furnaces produce regular glass
+        ModLoader.AddSmelting(StainedGlassConstants.sandID, new ItemStack(Block.glass));
     }
 
     public String Version(){ return "0.5"; }
