@@ -1,11 +1,15 @@
 package net.minecraft.src;
 
 import java.util.HashMap;
+import java.util.Random;
 
 public class BlockColoredSand extends BlockSand {
 
+    protected int damage;
+
     public BlockColoredSand(int i, int j){
         super(i,j);
+        damage = (j & 0xf);
     }
 
     @Override
@@ -36,7 +40,13 @@ public class BlockColoredSand extends BlockSand {
         return ~i & 0xf;
     }
 
-    //The following method was adapted from Sand.java
+    //The following 2 methods were adapted from Sand.java
+
+    @Override
+    public void updateTick(World world, int i, int j, int k, Random random)
+    {
+        tryToFall(world, i, j, k);
+    }
 
     private void tryToFall(World world, int i, int j, int k)
     {
@@ -58,7 +68,7 @@ public class BlockColoredSand extends BlockSand {
             {
                 EntityFallingColoredSand entityfallingsand = new EntityFallingColoredSand(
                         world, (float)i + 0.5F, (float)j + 0.5F, (float)k + 0.5F,
-                        StainedGlassConstants.sandID, blockIndexInTexture);
+                        StainedGlassConstants.sandID, damage);
                 world.entityJoinedWorld(entityfallingsand);
             }
         }

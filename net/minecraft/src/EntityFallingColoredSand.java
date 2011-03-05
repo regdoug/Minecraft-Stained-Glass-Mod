@@ -14,9 +14,9 @@ public class EntityFallingColoredSand extends EntityFallingSand {
     protected int damage;
 
     public EntityFallingColoredSand(World world, double d, double d1, double d2,
-            int i, int j){
+            int i, int damage){
         super(world,d,d1,d2,i);
-        damage = j;
+        this.damage = damage;
     }
 
     @Override

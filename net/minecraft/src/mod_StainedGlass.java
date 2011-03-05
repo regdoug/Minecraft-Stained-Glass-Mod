@@ -31,19 +31,12 @@ public class mod_StainedGlass extends BaseMod {
         System.out.println("Starting up!");
         return "0.5"; }
   
-    public void AddRecipe(CraftingManager cm){
-		//just a test
-		cm.addRecipe(new ItemStack(Item.coal), new Object[]{
-			" x ","# #"," x ",
-			Character.valueOf('x'),Block.planks,
-			Character.valueOf('#'),Block.cobblestone,			
-		});
-	
+    public void AddRecipe(CraftingManager cm){	
         /*
          * New type of Furnace
          */
         cm.addRecipe(new ItemStack(StainedGlassConstants.furnaceID,1,0),
-                new Object[]{"###","# #","#L#",
+                new Object[]{"###","#L#","###",
                         Character.valueOf('#'), new ItemStack(Block.cobblestone),
                         Character.valueOf('L'), new ItemStack(Block.planks)});
         /*
@@ -56,9 +49,9 @@ public class mod_StainedGlass extends BaseMod {
 //            cm.addShapelessRecipe(new ItemStack(StainedGlassConstants.sandID, 1, BlockColoredSand.func_21035_d(i)), new Object[] {
 //                new ItemStack(Item.dyePowder, 1, i), new ItemStack(Block.sand)
 //            });
-			cm.addRecipe(new ItemStack(StainedGlassConstants.sandID,1,i), new Object[]{
-				"d","s",Character.valueOf('d'),new ItemStack(Item.dyePowder,1,i),Character.valueOf('s'),Block.sand
-			});
+            cm.addRecipe(new ItemStack(StainedGlassConstants.sandID,1,i), new Object[]{
+                    "d","s",Character.valueOf('d'),new ItemStack(Item.dyePowder,1,i),Character.valueOf('s'),Block.sand
+            });
         }
 
         /*
@@ -67,12 +60,12 @@ public class mod_StainedGlass extends BaseMod {
          * adapted from previous function and from RecipesCrafting.java
          */
 
-        /*for(int i = 0; i < 16; i++)
+        for(int i = 0; i < 16; i++)
         {
             cm.addRecipe(new ItemStack(StainedGlassConstants.sandstoneID,1,i), new Object[] {
                 "##", "##", Character.valueOf('#'), new ItemStack(StainedGlassConstants.sandID,1,i)
             });
-        }*/
+        }
     }
 
 }
