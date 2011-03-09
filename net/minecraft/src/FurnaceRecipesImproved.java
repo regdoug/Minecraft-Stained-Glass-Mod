@@ -12,14 +12,14 @@ import java.util.Map;
  *
  * @author reginald
  */
-public class DyedFurnaceRecipes {
+public class FurnaceRecipesImproved {
 
-    public static DyedFurnaceRecipes smelting()
+    public static FurnaceRecipesImproved smelting()
     {
         return smeltingBase;
     }
 
-    private DyedFurnaceRecipes()
+    private FurnaceRecipesImproved()
     {
         smeltingList = new HashMap<Integer,Object>();
         HashMap<Integer,ItemStack> entry;
@@ -63,7 +63,7 @@ public class DyedFurnaceRecipes {
         return null;
     }
 
-    protected static final DyedFurnaceRecipes smeltingBase = new DyedFurnaceRecipes();
+    protected static final FurnaceRecipesImproved smeltingBase = new FurnaceRecipesImproved();
     protected Map<Integer,Object> smeltingList;
 
 }

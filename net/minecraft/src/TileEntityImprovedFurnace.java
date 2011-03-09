@@ -9,11 +9,11 @@ package net.minecraft.src;
  *
  * @author reginald
  */
-public class TileEntityStainedGlassFurnace extends TileEntity
+public class TileEntityImprovedFurnace extends TileEntity
     implements IInventory
 {
 
-    public TileEntityStainedGlassFurnace()
+    public TileEntityImprovedFurnace()
     {
         furnaceItemStacks = new ItemStack[3];
         furnaceBurnTime = 0;
@@ -176,7 +176,7 @@ public class TileEntityStainedGlassFurnace extends TileEntity
             if(flag != (furnaceBurnTime > 0))
             {
                 flag1 = true;
-                BlockStainedGlassFurnace.updateFurnaceBlockState(furnaceBurnTime > 0, worldObj, xCoord, yCoord, zCoord);
+                BlockImprovedFurnace.updateFurnaceBlockState(furnaceBurnTime > 0, worldObj, xCoord, yCoord, zCoord);
             }
         }
         if(flag1)
@@ -191,10 +191,8 @@ public class TileEntityStainedGlassFurnace extends TileEntity
         {
             return false;
         }
-        ItemStack itemstack = null;
-        if(furnaceItemStacks[0].itemID == StainedGlassConstants.sandID) {
-            itemstack = DyedFurnaceRecipes.smelting().getSmeltingResult(furnaceItemStacks[0]);
-        } else {
+        ItemStack itemstack = FurnaceRecipesImproved.smelting().getSmeltingResult(furnaceItemStacks[0]);
+        if(itemstack == null) {
             itemstack = FurnaceRecipes.smelting().getSmeltingResult(furnaceItemStacks[0].getItem().shiftedIndex);
         }
         if(itemstack == null)

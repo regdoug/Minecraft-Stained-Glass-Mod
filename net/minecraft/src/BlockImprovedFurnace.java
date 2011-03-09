@@ -9,11 +9,11 @@ package net.minecraft.src;
  *
  * @author reginald
  */
-public class BlockStainedGlassFurnace extends BlockFurnace {
+public class BlockImprovedFurnace extends BlockFurnace {
 
     public final int tex;
 
-    public BlockStainedGlassFurnace(int i, boolean flag){
+    public BlockImprovedFurnace(int i, boolean flag){
         super(i,flag);
         tex = ModLoader.addOverride("/terrain.png", StainedGlassConstants.imgPath + "stainedglassfurnacefront.png");
     }
@@ -21,7 +21,7 @@ public class BlockStainedGlassFurnace extends BlockFurnace {
     @Override
     protected TileEntity getBlockEntity()
     {
-        return new TileEntityStainedGlassFurnace();
+        return new TileEntityImprovedFurnace();
     }
 
     @Override

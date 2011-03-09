@@ -19,12 +19,12 @@ public class mod_StainedGlass extends BaseMod {
                         .setStepSound(Block.soundGlassFootstep).setBlockName("coloredglass"),
                 ItemColoredGlass.class);
         ModLoader.RegisterBlock(
-                (new BlockStainedGlassFurnace(StainedGlassConstants.furnaceID, false)).setHardness(3.5F)
-                        .setStepSound(Block.soundStoneFootstep).setBlockName("stainedglassfurnace"),
+                (new BlockImprovedFurnace(StainedGlassConstants.furnaceID, false)).setHardness(3.5F)
+                        .setStepSound(Block.soundStoneFootstep).setBlockName("ImprovedFurnace"),
                 ItemColoredSandStone.class);
 
-        //Smelting will need a new furnace block b/c it won't work any other way
-        //TODO: register TileEntity
+        //Register tile entity for new furnace
+        ModLoader.RegisterTileEntity(TileEntityImprovedFurnace.class, "ImprovedFurnace");
 
         //Regular furnaces produce regular glass
         ModLoader.AddSmelting(StainedGlassConstants.sandID, new ItemStack(Block.glass));
@@ -34,7 +34,8 @@ public class mod_StainedGlass extends BaseMod {
         System.out.println("Starting up!");
         return "0.5"; }
   
-    public void AddRecipe(CraftingManager cm){	
+    @Override
+    public void AddRecipes(CraftingManager cm){
         /*
          * New type of Furnace
          */
@@ -49,11 +50,8 @@ public class mod_StainedGlass extends BaseMod {
          */
         for(int i = 0; i < 16; i++)
         {
-//            cm.addShapelessRecipe(new ItemStack(StainedGlassConstants.sandID, 1, BlockColoredSand.func_21035_d(i)), new Object[] {
-//                new ItemStack(Item.dyePowder, 1, i), new ItemStack(Block.sand)
-//            });
-            cm.addRecipe(new ItemStack(StainedGlassConstants.sandID,1,i), new Object[]{
-                    "d","s",Character.valueOf('d'),new ItemStack(Item.dyePowder,1,i),Character.valueOf('s'),Block.sand
+            cm.addShapelessRecipe(new ItemStack(StainedGlassConstants.sandID, 1, BlockColoredSand.func_21035_d(i)), new Object[] {
+                new ItemStack(Item.dyePowder, 1, i), new ItemStack(Block.sand)
             });
         }
 
