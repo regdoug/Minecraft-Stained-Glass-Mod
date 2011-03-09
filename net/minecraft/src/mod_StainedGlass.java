@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import java.util.Map;
+
 public class mod_StainedGlass extends BaseMod {
 
     static{
@@ -22,6 +24,7 @@ public class mod_StainedGlass extends BaseMod {
                 ItemColoredSandStone.class);
 
         //Smelting will need a new furnace block b/c it won't work any other way
+        //TODO: register TileEntity
 
         //Regular furnaces produce regular glass
         ModLoader.AddSmelting(StainedGlassConstants.sandID, new ItemStack(Block.glass));
@@ -66,6 +69,11 @@ public class mod_StainedGlass extends BaseMod {
                 "##", "##", Character.valueOf('#'), new ItemStack(StainedGlassConstants.sandID,1,i)
             });
         }
+    }
+
+    @Override
+    public void AddRenderer(Map var1) {
+        var1.put(EntityFallingColoredSand.class,new RenderFallingColoredSand());
     }
 
 }
